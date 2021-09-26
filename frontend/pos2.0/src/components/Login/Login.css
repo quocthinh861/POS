@@ -1,0 +1,92 @@
+.login_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px 
+}
+
+.login_container > span {
+  color: #1792d9;
+  font-size: 1rem;
+  letter-spacing: 3.52px;
+  font-weight: 400;
+  margin-bottom: .9375rem;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.login_buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 19.375rem;
+  margin: 3.125rem auto 0;
+  width: 19rem;
+
+}
+
+.login_buttons > button {
+  width: 100%;
+  padding: .375rem 1rem;
+  border-radius: 7px;
+  color: #fff;
+  min-height: 3.25rem;
+  transition: .2s;
+  border: 0;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-decoration: none;
+  cursor: pointer;
+  position:relative;
+
+}
+
+.login_buttons > button > svg {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: absolute;
+  left: .9375rem;
+  top: .625rem;
+}
+
+.auth-or {
+    margin: 0 0 .75rem;
+    position: relative;
+    width: 100%;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.auth-or span { 
+  transition: .2s;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 8px;
+  font-size: 15px;
+  color: rgba(36,53,106,.6);
+}
+
+.auth-or::before, .auth-or::after {
+  content: "";
+  background: #c8ceed;
+  height: 1px;
+  width: 100%;
+}
+
+.login_google {
+  margin-bottom: .75rem;
+  background-color: #0076ff;
+}
+
+.login_facebook {
+  background-color: #4267b2;
+  margin-bottom: .75rem;
+}
+
+.login_email {
+  background-color: #ff6100;
+  color: #fff;
+}
