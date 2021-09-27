@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Login.css";
+import {auth , provider}  from '../../firebase.js';
 
 const Login = () => {
+
+  const signin = () => {
+    auth.signInWithPopup(provider).catch(alert);
+  }
 
   return (
     <div className="login_container">
@@ -11,7 +16,7 @@ const Login = () => {
           POS Project for Software Engineer course
         </h1>
         <div className="login_buttons">
-          <button className="login_google">
+          <button className="login_google" onClick={signin}>
             <svg class="auth-section-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="19" cy="19" r="19" fill="white"></circle>
 <path d="M28.6259 19.2853C28.6259 18.4939 28.5604 17.9164 28.4186 17.3175H19.1974V20.8894H24.61C24.501 21.7771 23.9117 23.1139 22.6021 24.0122L22.5838 24.1318L25.4993 26.3452L25.7013 26.365C27.5565 24.686 28.6259 22.2155 28.6259 19.2853" fill="#4285F4"></path>

@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <nav>
       <div className="logo">
-        SE<font> Ordering Food System</font>
+        SE<font>&#160;Ordering Food System</font>
       </div>
       <div className="menu-icon" onClick={handleClick}>
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
