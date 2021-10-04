@@ -12,10 +12,6 @@ export const MenuList = [
       url: "/cart",
     },
     {
-      title: "Login",
-      url: "/login",
-    },
-    {
       title: "Sign up",
       url: "/signup",
     },

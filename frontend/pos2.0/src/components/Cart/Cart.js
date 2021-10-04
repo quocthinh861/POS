@@ -1,59 +1,32 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Cart.css";
-
+import Item from '../CartItem/Item';
+import { useSelector, useDispatch } from 'react-redux';
 const Cart = () => {
-
-  return (
-    <div className="cart_container">
-      <h1>Your cart (1)</h1>
-      <div>
-            <div className="item">
-                <img src="/images/menu-1.jpg" atl="food-item-img"/>
-                <div>
-                    <span>FOODNAME</span>
-                    <div className="qty">
-                        <span className="minor">-</span><span> 1 </span><span className="add">+</span>
+    const cart = useSelector(state => state.item);
+    return (
+        <div className="cart_container">
+            {
+                cart.numberCart > 0 ? (
+                    <div>
+                        <h1>Your cart ({cart.numberCart})</h1>
+                        <div>
+                        {
+                            cart.Carts.map((item) => (
+                                <Item value={item} id={item.id}></Item>    
+                            ))
+                        }
+                        </div>
+                        <div className="total">
+                            Subtotal ({cart.numberCart} items): <b>${cart.Carts.reduce((a, b) => a + b.quantity * b.price, 0).toFixed(2)}</b>
+                            <button className="payment">PAYMENT</button>
+                        </div>
                     </div>
-                </div>
-                <span className="price">$15.99</span>
-            </div>
-            <div className="item">
-                <img src="/images/menu-1.jpg" atl="food-item-img"/>
-                <div>
-                    <span>FOODNAME</span>
-                    <div className="qty">
-                        <span className="minor">-</span><span> 1 </span><span className="add">+</span>
-                    </div>
-                </div>
-                <span className="price">$15.99</span>
-            </div>
-            <div className="item">
-                <img src="/images/menu-1.jpg" atl="food-item-img"/>
-                <div>
-                    <span>FOODNAME</span>
-                    <div className="qty">
-                        <span className="minor">-</span><span> 1 </span><span className="add">+</span>
-                    </div>
-                </div>
-                <span className="price">$15.99</span>
-            </div>
-            <div className="item">
-                <img src="/images/menu-1.jpg" atl="food-item-img"/>
-                <div>
-                    <span>FOODNAME</span>
-                    <div className="qty">
-                        <span className="minor">-</span><span> 1 </span><span className="add">+</span>
-                    </div>
-                </div>
-                <span className="price">$15.99</span>
-            </div>
+                ) : <h2>Your cart is empty</h2>
+            }
         </div>
-        <div className="total">
-            Subtotal (4 items): <b>$51.15</b>
-        </div>
-    </div>
-  );
+    );
 };
 
 export default Cart;

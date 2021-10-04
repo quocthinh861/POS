@@ -10,3 +10,7 @@ code {
     monospace;
 }
 
+* {
+  user-select: none;
+}
+

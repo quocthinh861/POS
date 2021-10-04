@@ -35,21 +35,64 @@
 
 .cart_container .item .qty {
     margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.cart_container .item .option:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(214, 118, 118);
+}
+
+.cart_container .item .qty > .minor {
+    background: red;    
+    margin-right: 10px;
+}
+
+.cart_container .item .qty > .add {
+    margin-left: 10px;
+    background: lightgreen;
 }
 
 .cart_container .item .qty > .minor, 
 .cart_container .item .qty > .add {
     padding: 5px 10px;
-    color: red;
+    user-select: none;
+    color: black;
     font-size: 15px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .cart_container .total {
     border-top: 1px solid gray;
     margin-top: 10px;
-    padding-top: 10px;
-    text-align: right;
+    padding-top: 15px;   
     font-size: 18px;
+    text-align: right;
+}
+
+.cart_container .total > * {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.cart_container .total .payment {
+    background: #FFD814;
+    display: block;
+    color: black;
+    font-size: 13px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+    
+}
+
+.cart_container .total .payment:hover {
+    background: #F7CA00;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
