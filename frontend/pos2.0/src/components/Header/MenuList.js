@@ -12,7 +12,7 @@ export const MenuList = [
       url: "/cart",
     },
     {
-      title: "Sign up",
-      url: "/signup",
+      title: "Sign in",
+      url: "/signin",
     },
 ];

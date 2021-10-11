@@ -43,7 +43,7 @@ nav {
     align-items: center;
   }
   
-  .menu-list li:last-child a {
+  .menu-list li:last-child a[href="/signup"] {
     font-weight: 300;
     padding: 5px 10px;
     background-color: #01aacd;

@@ -5,12 +5,17 @@ import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import Menu from './components/Menu/Menu'
 import Cart from './components/Cart/Cart';
+import Signup from './components/Login/Signup';
+
 function App() {
   return (
     <Router>
         <Header />
-        <Route path="/signup">
+        <Route path="/signin">
           <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="/menu">
           <Menu />
